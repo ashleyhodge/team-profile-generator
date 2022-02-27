@@ -13,3 +13,8 @@ test('Create a new manager object', () => {
     );
 }); 
 
+test('get role as an object', () => {
+    const manager = new Manager('Ashley', 1, 'ashhodge@comcast.net', 12);
+
+    expect(manager.getRole()).toHaveProperty('role');
+})
