@@ -4,22 +4,19 @@ const Employee = require('../lib/Employee');
 jest.mock('../lib/Employee');
 
 test('Create a new intern object', () => {
-    const intern = new Intern('Ashley', 1, 'ashhodge@comcast.net');
+    const intern = new Intern('Ashley', 1, 'ashhodge@comcast.net', 'Vanderbilt');
 
-    expect(intern.info).toEqual(
-        expect.arrayContaining([expect.any(Object)])
-        
-    );
+    expect(intern.school).toEqual(expect.any(String));
 }); 
 
 test('get school as an object', () => {
-    const intern = new Intern('Ashley', 1, 'ashhodge@comcast.net');
+    const intern = new Intern('Ashley', 1, 'ashhodge@comcast.net', 'Vanderbilt');
 
-    expect(intern.getSchool()).toHaveProperty('school');
+    expect(intern.getSchool()).toEqual(expect.any(String));
 })
 
 test('get role as an object', () => {
     const intern = new Intern('Ashley', 1, 'ashhodge@comcast.net');
 
-    expect(intern.getRole()).toHaveProperty('role');
+    expect(intern.getRole()).toEqual('Intern');
 })

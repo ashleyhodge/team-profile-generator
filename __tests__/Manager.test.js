@@ -7,14 +7,10 @@ test('Create a new manager object', () => {
     const manager = new Manager('Ashley', 1, 'ashhodge@comcast.net', 12);
 
     expect(manager.office).toEqual(expect.any(Number));
-    expect(manager.info).toEqual(
-        expect.arrayContaining([expect.any(Object)])
-        
-    );
 }); 
 
 test('get role as an object', () => {
     const manager = new Manager('Ashley', 1, 'ashhodge@comcast.net', 12);
 
-    expect(manager.getRole()).toHaveProperty('role');
+    expect(manager.getRole()).toEqual('Manager');
 })
